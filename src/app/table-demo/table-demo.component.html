@@ -1,0 +1,43 @@
+<div class="container p-5">
+  <h3>Users</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>IP address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of systemUsers">
+        <td>
+          {{ user.id }}
+        </td>
+        <td>
+          {{ user.firstName }}
+        </td>
+        <td>
+          {{ user.lastName }}
+        </td>
+        <td>
+          {{ user.gender }}
+        </td>
+        <td>
+          {{ user.email }}
+        </td>
+        <td>
+          {{ user.ipAddress }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li *ngFor="let c of colours; index as i; first as f; last as l">
+      {{ c }} -> {{ i }} -> {{ f }} -> {{ l }}
+    </li>
+  </ul>
+</div>

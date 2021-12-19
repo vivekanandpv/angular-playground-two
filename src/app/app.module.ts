@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SampleComponent } from './sample/sample.component';
 import { QueryComponent } from './query/query.component';
+import { StructuralDemoComponent } from './structural-demo/structural-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SampleComponent,
-    QueryComponent
+    QueryComponent,
+    StructuralDemoComponent
   ],
   imports: [
     BrowserModule,

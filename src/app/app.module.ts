@@ -7,6 +7,8 @@ import { SampleComponent } from './sample/sample.component';
 import { QueryComponent } from './query/query.component';
 import { StructuralDemoComponent } from './structural-demo/structural-demo.component';
 import { TableDemoComponent } from './table-demo/table-demo.component';
+import { ScientistCardComponent } from './scientist-card/scientist-card.component';
+import { CardHolderComponent } from './card-holder/card-holder.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { TableDemoComponent } from './table-demo/table-demo.component';
     SampleComponent,
     QueryComponent,
     StructuralDemoComponent,
-    TableDemoComponent
+    TableDemoComponent,
+    ScientistCardComponent,
+    CardHolderComponent
   ],
   imports: [
     BrowserModule,

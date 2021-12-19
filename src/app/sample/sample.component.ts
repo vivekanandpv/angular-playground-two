@@ -13,6 +13,14 @@ import { QueryComponent } from '../query/query.component';
   styleUrls: ['./sample.component.scss'],
 })
 export class SampleComponent implements OnInit, AfterViewInit {
+  borderRequired = true;
+  tableClass: object = {
+    table: true,
+    'table-sm': true,
+    'table-striped': true,
+    'table-bordered': true,
+  };
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -25,5 +33,24 @@ export class SampleComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.queryComponentRef.message = 'Message changed from the parent';
     }, 2000);
+  }
+
+  changeSelection(args: any): void {
+    console.log(args);
+    if (args.target.value === 'yes') {
+      this.tableClass = {
+        table: true,
+        'table-sm': true,
+        'table-striped': true,
+        'table-bordered': true,
+      };
+    } else {
+      this.tableClass = {
+        table: true,
+        'table-sm': true,
+        'table-striped': true,
+        'table-bordered': false,
+      };
+    }
   }
 }

@@ -21,6 +21,15 @@ export class SampleComponent implements OnInit, AfterViewInit {
     'table-bordered': true,
   };
 
+  compStyle = {
+    width: '10rem',
+    'background-color': '#ddd',
+    padding: '1rem',
+    border: '2px solid #d20',
+    'font-weight': '600',
+    'font-style': 'monospace',
+  };
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -44,6 +53,8 @@ export class SampleComponent implements OnInit, AfterViewInit {
         'table-striped': true,
         'table-bordered': true,
       };
+
+      this.compStyle = { ...this.compStyle, border: '2px solid #d20' };
     } else {
       this.tableClass = {
         table: true,
@@ -51,6 +62,8 @@ export class SampleComponent implements OnInit, AfterViewInit {
         'table-striped': true,
         'table-bordered': false,
       };
+
+      this.compStyle = { ...this.compStyle, border: '' };
     }
   }
 }
